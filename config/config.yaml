@@ -1,0 +1,5 @@
+app:
+  url: "www.XXX.com"
+
+log:
+  logUrl: "/data/logs"
