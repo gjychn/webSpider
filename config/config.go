@@ -20,7 +20,7 @@ type logInfo struct {
 	Url string `yaml:"url"`
 }
 
-func (*config) LoadConfig(url string) *config{
+func LoadConfig(url string) (*config, error){
 	vip := viper.New()
 	vip.SetConfigName("config")
 	vip.SetConfigFile(url)
@@ -28,8 +28,9 @@ func (*config) LoadConfig(url string) *config{
 	if err != nil {
 		fmt.Println("123")
 		//TODO  日志记录
+		return nil, err
 	}
 	viper.Unmarshal(DefaultConfig)
 
-	return  DefaultConfig
+	return  DefaultConfig, nil
 }
