@@ -1,6 +1,8 @@
 package log
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestZapLogger(t *testing.T) {
 	NewZapperLogger().Debug("log debug can user")

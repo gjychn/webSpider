@@ -11,7 +11,6 @@ type zapLogger struct {
 
 var defaultLog = NewZapperLogger()
 
-
 func NewZapperLogger()  *zapLogger {
 	conf := zap.NewDevelopmentConfig()
 	logger, _ := conf.Build(zap.AddCaller(), zap.AddCallerSkip(1))
