@@ -1,8 +1,8 @@
 package config
 
 import (
-	"fmt"
 	"github.com/spf13/viper"
+	"webSpider/log"
 )
 
 var DefaultConfig = new(config)
@@ -26,8 +26,7 @@ func LoadConfig(url string) (*config, error){
 	vip.SetConfigFile(url)
 	err := vip.ReadInConfig()
 	if err != nil {
-		fmt.Println("123")
-		//TODO  日志记录
+		log.Error("config is err")
 		return nil, err
 	}
 	viper.Unmarshal(DefaultConfig)

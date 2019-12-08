@@ -1,17 +1,10 @@
 package log
 
-import (
-	"testing"
-)
+import "testing"
 
-//func TestZapLogger_Debug(t *testing.T) {
-//	NewZapperLogger().Error("AAAAAAA")
-//}
-
-func TestStr(t *testing.T)  {
-
-	for i := 0; i < 100000; i++ {
-		//fmt.Sprintf("%s%s", a, b)
-		NewZapperLogger().Error("AAAAAAA")
-	}
+func TestZapLogger(t *testing.T) {
+	NewZapperLogger().Debug("log debug can user")
+	NewZapperLogger().Info("log info can user")
+	NewZapperLogger().Warn("log warn can user")
+	NewZapperLogger().Error("log error can user")
 }
