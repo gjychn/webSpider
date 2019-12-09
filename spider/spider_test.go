@@ -1,7 +1,10 @@
 package spider
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestSpider(t *testing.T) {
-	//httpGet("http://www.baidu.com")
+	fmt.Println(hrefGet(htmlGet("http://news.baidu.com/")))
 }
